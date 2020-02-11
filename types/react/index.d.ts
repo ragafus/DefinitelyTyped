@@ -78,7 +78,7 @@ declare namespace React {
     type ComponentType<P = {}> = ComponentClass<P> | FunctionComponent<P>;
 
     type JSXElementConstructor<P> =
-        | ((props: P) => ReactElement | null)
+        | ((props: P) => ReactElement | null | undefined | boolean)
         | (new (props: P) => Component<P, any>);
 
     type Key = string | number;
